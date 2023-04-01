@@ -10,8 +10,7 @@ while True:
     msg = data.decode()
     req = msg.split('\r\n')
 
-    # filename = req[0].split()[1].split('/')[1]  # 공백 분류 + '/'기준 분류
-    filename = req[0].split()[1][1:]
+    filename = req[0].split()[1].split('/')[1]  # 공백 분류 + '/'기준 분류
 
     if filename == 'index.html':
         f = open(filename, 'r', encoding='utf-8')
@@ -25,7 +24,7 @@ while True:
 
     elif filename == 'iot.png':
         f = open(filename, 'rb')
-        mimeType = 'imag/png'
+        mimeType = 'image/png'
         data = f.read()
         # HTTP 헤더 전송
         c.send(b'HTTP/1.1 200 OK\r\n')
