@@ -10,7 +10,7 @@ while True:
     msg = data.decode()
     req = msg.split('\r\n')
 
-    filename = req[0].split()[1].split('/')[1]  # 공백 분류 + '/'기준 분류
+    filename = req[0].split()[1].split('/')[1]  # 공백 + '/'으로 분류
 
     if filename == 'index.html':
         f = open(filename, 'r', encoding='utf-8')
