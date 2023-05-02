@@ -11,6 +11,7 @@ while True:
     msg = input('-> ')
     reTx = 0
     while reTx < 4:
+        # 메시지 붙여놓고 보내는것
         resp = str(reTx) + ' ' + msg
         sock.sendto(resp.encode(), ('localhost', port))
         sock.settimeout(2) # timeout 2초
