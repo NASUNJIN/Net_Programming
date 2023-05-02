@@ -37,8 +37,3 @@ while True:
             sock.sendto(mbox_index[mboxID].pop(0).encode(), addr)
 
 sock.close()
-
-
-
-        
-
